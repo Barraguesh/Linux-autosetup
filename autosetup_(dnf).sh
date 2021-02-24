@@ -171,7 +171,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     flatpak install flathub org.signal.Signal -y
     flatpak install flathub org.fedoraproject.MediaWriter -y
     flatpak install flathub com.valvesoftware.Steam -y
-    flatpak install flathub com.spotify.Client -y
+    flatpak install flathub dev.alextren.Spot -y
     flatpak install flathub com.transmissionbt.Transmission -y
     flatpak install flathub org.glimpse_editor.Glimpse -y
     flatpak install flathub com.github.tchx84.Flatseal -y
