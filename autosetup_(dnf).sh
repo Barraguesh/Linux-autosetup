@@ -150,16 +150,20 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo dnf install neofetch -y
     sudo dnf install gnome-tweak-tool  -y
     sudo dnf install terminator -y
+    #VS Code (Flatpak app isn't official plus sometimes bugs out)
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+    sudo dnf check-update
+    sudo dnf install code -y
     #Non terminal installable apps
-    firefox 'https://www.stremio.com/downloads#linux'
     firefox 'https://www.veracrypt.fr/en/Downloads.html'
     firefox 'https://cryptomator.org/downloads/'
     #Appimage installer
     firefox 'https://github.com/TheAssassin/AppImageLauncher/releases'
     #Flatpak apps
-    flatpak install flathub com.visualstudio.code -y
     flatpak install flathub com.obsproject.Studio -y
     flatpak install flathub com.tutanota.Tutanota -y
+    flatpak install flathub com.stremio.Stremio -y
     flatpak install flathub com.github.philip_scott.spice-up -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub org.kde.kdenlive -y
