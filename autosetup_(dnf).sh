@@ -41,6 +41,18 @@ echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo dnf install adb fastboot -y
 fi
+read -p 'Setup undervolt? (Intel only) (y/N) ' -n 1 -r
+echo -e "\n"
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    git clone https://github.com/kitsunyan/intel-undervolt.git
+    ./configure && sudo make && sudo make install
+    echo 'Change CPU and CPU Cache by 100-150 mV'
+    sleep 5
+    sudo nano /etc/intel-undervolt.conf
+    sudo intel-undervolt apply
+    sudo intel-undervolt read
+    sleep 5
+fi
 #Flatpak support
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 #Multiple rar support for file extract
@@ -52,7 +64,7 @@ sudo service clamav-freshclam start
 sudo dnf install git -y
 git config --global user.email "25356150+Barraguesh@users.noreply.github.com"
 git config --global user.name "Barraguesh"
-read -p 'Wanna enable auto updates? (y/N) ' -n 1 -r
+read -p 'Setup auto updates? (y/N) ' -n 1 -r
 echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo dnf install dnf-automatic -y
