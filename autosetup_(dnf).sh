@@ -183,7 +183,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo flatpak install flathub fr.romainvigier.MetadataCleaner -y
     sudo flatpak install flathub org.chromium.Chromium -y
     sudo flatpak install flathub org.telegram.desktop -y
-    sudo flatpak install flathub nz.mega.MEGAsync -y
     sudo flatpak install flathub com.belmoussaoui.Obfuscate -y
     sudo flatpak install flathub org.signal.Signal -y
     sudo flatpak install flathub org.fedoraproject.MediaWriter -y
