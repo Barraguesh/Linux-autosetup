@@ -47,12 +47,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     git clone https://github.com/kitsunyan/intel-undervolt.git
     cd ./intel-undervolt
     ./configure && sudo make && sudo make install
-    echo 'Change CPU and CPU Cache by 100-150 mV'
-    sleep 5
     sudo nano /etc/intel-undervolt.conf
+    sleep 5
     sudo intel-undervolt apply
     sudo intel-undervolt read
-    sleep 5
     cd ..
 fi
 #Flatpak support
@@ -106,6 +104,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature "u
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 #Dock personalization (gsettings get org.gnome.shell favorite-apps)
 gsettings set org.gnome.shell favorite-apps "['terminator.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'org.chromium.Chromium.desktop', 'com.valvesoftware.Steam.desktop', 'com.stremio.Stremio.desktop', 'com.spotify.Client.desktop', 'org.signal.Signal.desktop', 'com.obsproject.Studio.desktop', 'org.kde.kdenlive.desktop']"
+echo 'Settings applied.'
 read -p 'Set up themes? (y/N) ' -n 1 -r
 echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -116,7 +115,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     #Shell, use default
     #Applications and Flatpak support
     sudo dnf install arc-theme -y
-    flatpak install flathub org.gtk.Gtk3theme.Arc-Dark -y
+    sudo flatpak install flathub org.gtk.Gtk3theme.Arc-Dark -y
     gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
     #Icons
     sudo dnf install papirus-icon-theme -y
@@ -175,30 +174,30 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     #Appimage installer
     firefox 'https://github.com/TheAssassin/AppImageLauncher/releases'
     #Flatpak apps
-    flatpak install flathub com.obsproject.Studio -y
-    flatpak install flathub com.tutanota.Tutanota -y
-    flatpak install flathub com.stremio.Stremio -y
-    flatpak install flathub com.github.philip_scott.spice-up -y
-    flatpak install flathub org.videolan.VLC -y
-    flatpak install flathub org.kde.kdenlive -y
-    flatpak install flathub fr.romainvigier.MetadataCleaner -y
-    flatpak install flathub org.chromium.Chromium -y
-    flatpak install flathub org.telegram.desktop -y
-    flatpak install flathub nz.mega.MEGAsync -y
-    flatpak install flathub com.belmoussaoui.Obfuscate -y
-    flatpak install flathub org.signal.Signal -y
-    flatpak install flathub org.fedoraproject.MediaWriter -y
-    flatpak install flathub com.valvesoftware.Steam -y
-    flatpak install flathub dev.alextren.Spot -y
-    flatpak install flathub com.transmissionbt.Transmission -y
-    flatpak install flathub org.glimpse_editor.Glimpse -y
-    flatpak install flathub com.github.tchx84.Flatseal -y
-    flatpak install flathub org.gnome.Extensions -y
+    sudo flatpak install flathub com.obsproject.Studio -y
+    sudo flatpak install flathub com.tutanota.Tutanota -y
+    sudo flatpak install flathub com.stremio.Stremio -y
+    sudo flatpak install flathub com.github.philip_scott.spice-up -y
+    sudo flatpak install flathub org.videolan.VLC -y
+    sudo flatpak install flathub org.kde.kdenlive -y
+    sudo flatpak install flathub fr.romainvigier.MetadataCleaner -y
+    sudo flatpak install flathub org.chromium.Chromium -y
+    sudo flatpak install flathub org.telegram.desktop -y
+    sudo flatpak install flathub nz.mega.MEGAsync -y
+    sudo flatpak install flathub com.belmoussaoui.Obfuscate -y
+    sudo flatpak install flathub org.signal.Signal -y
+    sudo flatpak install flathub org.fedoraproject.MediaWriter -y
+    sudo flatpak install flathub com.valvesoftware.Steam -y
+    sudo flatpak install flathub dev.alextren.Spot -y
+    sudo flatpak install flathub com.transmissionbt.Transmission -y
+    sudo flatpak install flathub org.glimpse_editor.Glimpse -y
+    sudo flatpak install flathub com.github.tchx84.Flatseal -y
+    sudo flatpak install flathub org.gnome.Extensions -y
     #Replacing rpm/repo versions with Flatpak versions
     sudo dnf remove libreoffice* -y
-    flatpak install flathub org.libreoffice.LibreOffice -y
+    sudo flatpak install flathub org.libreoffice.LibreOffice -y
     sudo dnf remove firefox -y
-    flatpak install flathub org.mozilla.firefox -y
+    sudo flatpak install flathub org.mozilla.firefox -y
 fi
 cd /tmp
 sudo rm -rf AutoSetup
