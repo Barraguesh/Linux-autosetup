@@ -45,6 +45,7 @@ read -p 'Setup undervolt? (Intel only) (y/N) ' -n 1 -r
 echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     git clone https://github.com/kitsunyan/intel-undervolt.git
+    cd ./intel-undervolt
     ./configure && sudo make && sudo make install
     echo 'Change CPU and CPU Cache by 100-150 mV'
     sleep 5
@@ -52,6 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo intel-undervolt apply
     sudo intel-undervolt read
     sleep 5
+    cd ..
 fi
 #Flatpak support
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
