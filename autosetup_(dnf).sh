@@ -138,17 +138,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     █▀▄ ██▄ █▄▄ █▄█ █░▀░█ █░▀░█ ██▄ █░▀█ █▄▀ ██▄ █▄▀   ██▄ █░█ ░█░ ██▄ █░▀█ ▄█ █ █▄█ █░▀█ ▄█
     '
     sleep 5
-    firefox 'https://extensions.gnome.org/extension/19/user-themes/'
-    firefox 'https://extensions.gnome.org/extension/1128/hide-activities-button/'
+    firefox 'https://extensions.gnome.org/extension/3843/just-perfection/'
     firefox 'https://extensions.gnome.org/extension/615/appindicator-support/'
-    firefox 'https://extensions.gnome.org/extension/7/removable-drive-menu/'
     firefox 'https://extensions.gnome.org/extension/2072/skip-window-ready-notification/'
     firefox 'https://extensions.gnome.org/extension/906/sound-output-device-chooser/'
-    firefox 'https://extensions.gnome.org/extension/118/no-topleft-hot-corner/'
     firefox 'https://extensions.gnome.org/extension/307/dash-to-dock/'
-    firefox 'https://extensions.gnome.org/extension/112/remove-accesibility/'
     firefox 'https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/'
-    firefox 'https://extensions.gnome.org/extension/595/autohide-battery/'
     firefox 'https://extensions.gnome.org/extension/945/cpu-power-manager/'
 fi
 read -p 'Install apps? (y/N) ' -n 1 -r
