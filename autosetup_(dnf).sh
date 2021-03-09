@@ -41,6 +41,13 @@ echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo dnf install adb fastboot -y
 fi
+read -p 'Install Docker? (y/N) ' -n 1 -r
+echo -e "\n"
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    sleep 10
+fi
 read -p 'Setup undervolt? (Intel only) (y/N) ' -n 1 -r
 echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
