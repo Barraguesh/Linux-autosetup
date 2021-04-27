@@ -194,11 +194,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo flatpak install flathub org.glimpse_editor.Glimpse -y
     sudo flatpak install flathub com.github.tchx84.Flatseal -y
     sudo flatpak install flathub org.gnome.Extensions -y
-    #Replacing rpm/repo versions with Flatpak versions
-    sudo dnf remove libreoffice* -y
-    sudo flatpak install flathub org.libreoffice.LibreOffice -y
-    sudo dnf remove firefox -y
-    sudo flatpak install flathub org.mozilla.firefox -y
 fi
 cd /tmp
 sudo rm -rf AutoSetup
