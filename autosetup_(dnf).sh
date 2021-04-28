@@ -110,7 +110,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature "uint32 1700"
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 #Dock personalization (gsettings get org.gnome.shell favorite-apps)
-gsettings set org.gnome.shell favorite-apps "['terminator.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'org.chromium.Chromium.desktop', 'com.valvesoftware.Steam.desktop', 'com.stremio.Stremio.desktop', 'com.spotify.Client.desktop', 'org.signal.Signal.desktop', 'com.obsproject.Studio.desktop', 'org.kde.kdenlive.desktop']"
+gsettings set org.gnome.shell favorite-apps "['terminator.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.standardnotes.standardnotes.desktop', 'com.valvesoftware.Steam.desktop', 'com.stremio.Stremio.desktop', 'org.signal.Signal.desktop', 'com.obsproject.Studio.desktop', 'org.pitivi.Pitivi.desktop']"
 echo 'Settings applied.'
 read -p 'Set up themes? (y/N) ' -n 1 -r
 echo -e "\n"
@@ -184,6 +184,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     #sudo flatpak install flathub org.kde.kdenlive -y
     sudo flatpak install flathub org.pitivi.Pitivi -y
     sudo flatpak install flathub fr.romainvigier.MetadataCleaner -y
+    sudo flatpak install flathub org.standardnotes.standardnotes -y
     sudo flatpak install flathub org.chromium.Chromium -y
     sudo flatpak install flathub org.telegram.desktop -y
     sudo flatpak install flathub com.belmoussaoui.Obfuscate -y
