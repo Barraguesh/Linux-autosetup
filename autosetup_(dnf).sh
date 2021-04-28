@@ -181,7 +181,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo flatpak install flathub com.stremio.Stremio -y
     sudo flatpak install flathub com.github.philip_scott.spice-up -y
     sudo flatpak install flathub org.videolan.VLC -y
-    sudo flatpak install flathub org.kde.kdenlive -y
+    #sudo flatpak install flathub org.kde.kdenlive -y
+    sudo flatpak install flathub org.pitivi.Pitivi -y
     sudo flatpak install flathub fr.romainvigier.MetadataCleaner -y
     sudo flatpak install flathub org.chromium.Chromium -y
     sudo flatpak install flathub org.telegram.desktop -y
