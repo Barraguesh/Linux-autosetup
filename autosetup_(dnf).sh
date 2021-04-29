@@ -146,7 +146,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     '
     sleep 5
     firefox 'https://extensions.gnome.org/extension/3843/just-perfection/'
-    firefox 'https://extensions.gnome.org/extension/615/appindicator-support/'
+    firefox 'https://extensions.gnome.org/extension/2890/tray-icons-reloaded/'
     firefox 'https://extensions.gnome.org/extension/2072/skip-window-ready-notification/'
     firefox 'https://extensions.gnome.org/extension/906/sound-output-device-chooser/'
     firefox 'https://extensions.gnome.org/extension/307/dash-to-dock/'
