@@ -149,6 +149,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     firefox 'https://extensions.gnome.org/extension/2890/tray-icons-reloaded/'
     firefox 'https://extensions.gnome.org/extension/2072/skip-window-ready-notification/'
     firefox 'https://extensions.gnome.org/extension/906/sound-output-device-chooser/'
+    firefox 'https://extensions.gnome.org/extension/2182/noannoyance/'
     firefox 'https://extensions.gnome.org/extension/307/dash-to-dock/'
     firefox 'https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/'
     firefox 'https://extensions.gnome.org/extension/945/cpu-power-manager/'
