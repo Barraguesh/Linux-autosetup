@@ -167,6 +167,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo dnf install gnome-tweak-tool  -y
     sudo dnf install terminator -y
     sudo dnf install htop -y
+    #VS Code
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+    sudo dnf check-update
+    sudo dnf install code
     #Non terminal installable apps
     firefox 'https://www.veracrypt.fr/en/Downloads.html'
     firefox 'https://cryptomator.org/downloads/'
@@ -174,7 +179,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     firefox 'https://github.com/TheAssassin/AppImageLauncher/releases'
     #Flatpak apps
     sudo flatpak install flathub com.obsproject.Studio -y
-    sudo flatpak install flathub com.visualstudio.code -y
     sudo flatpak install flathub com.tutanota.Tutanota -y
     sudo flatpak install flathub com.stremio.Stremio -y
     sudo flatpak install flathub com.github.philip_scott.spice-up -y
