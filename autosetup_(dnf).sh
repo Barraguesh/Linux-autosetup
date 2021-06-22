@@ -179,7 +179,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     firefox 'https://github.com/TheAssassin/AppImageLauncher/releases'
     #Flatpak apps
     sudo flatpak install flathub com.obsproject.Studio -y
-    sudo flatpak install flathub com.tutanota.Tutanota -y
     sudo flatpak install flathub com.stremio.Stremio -y
     sudo flatpak install flathub com.github.philip_scott.spice-up -y
     sudo flatpak install flathub org.videolan.VLC -y
