@@ -110,7 +110,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature "uint32 1700"
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 #Dock personalization (gsettings get org.gnome.shell favorite-apps)
-gsettings set org.gnome.shell favorite-apps "['terminator.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.standardnotes.standardnotes.desktop', 'com.valvesoftware.Steam.desktop', 'com.stremio.Stremio.desktop', 'org.signal.Signal.desktop', 'com.obsproject.Studio.desktop', 'org.pitivi.Pitivi.desktop']"
+gsettings set org.gnome.shell favorite-apps "['terminator.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.standardnotes.standardnotes.desktop', 'com.valvesoftware.Steam.desktop', 'code.desktop', 'com.stremio.Stremio.desktop', 'org.signal.Signal.desktop', 'com.obsproject.Studio.desktop', 'org.kde.kdenlive.desktop']"
 echo 'Settings applied.'
 read -p 'Set up themes? (y/N) ' -n 1 -r
 echo -e "\n"
