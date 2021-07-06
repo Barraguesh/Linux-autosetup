@@ -147,7 +147,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sleep 5
     firefox 'https://extensions.gnome.org/extension/3843/just-perfection/'
     firefox 'https://extensions.gnome.org/extension/2890/tray-icons-reloaded/'
-    firefox 'https://extensions.gnome.org/extension/2072/skip-window-ready-notification/'
     firefox 'https://extensions.gnome.org/extension/906/sound-output-device-chooser/'
     firefox 'https://extensions.gnome.org/extension/2182/noannoyance/'
     firefox 'https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/'
@@ -172,7 +171,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
     sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
     sudo dnf check-update
-    sudo dnf install code
+    sudo dnf install code -y
     #Non terminal installable apps
     firefox 'https://www.veracrypt.fr/en/Downloads.html'
     firefox 'https://cryptomator.org/downloads/'
