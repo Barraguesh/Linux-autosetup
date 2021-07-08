@@ -153,6 +153,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     firefox 'https://extensions.gnome.org/extension/945/cpu-power-manager/'
     firefox 'https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/'
     firefox 'https://extensions.gnome.org/extension/3193/blur-my-shell/'
+    firefox 'https://extensions.gnome.org/extension/7/removable-drive-menu/'
 fi
 read -p 'Install apps? (y/N) ' -n 1 -r
 echo -e "\n"
