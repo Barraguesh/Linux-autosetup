@@ -69,8 +69,8 @@ sudo dnf install clamav clamav-update -y
 sudo service clamav-freshclam start
 #Git credentials
 sudo dnf install git -y
-git config --global user.email "25356150+Barraguesh@users.noreply.github.com"
-git config --global user.name "Barraguesh"
+git config --global user.email '25356150+Barraguesh@users.noreply.github.com'
+git config --global user.name 'Barraguesh'
 read -p 'Setup auto updates? (y/N) ' -n 1 -r
 echo -e "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -121,9 +121,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     '
     #Shell, use default
     #Applications and Flatpak support
-    sudo dnf install arc-theme -y
-    sudo flatpak install flathub org.gtk.Gtk3theme.Arc-Dark -y
-    gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+    sudo flatpak install flathub org.gtk.Gtk3theme.Adwaita-Dark -y
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
     #Icons
     sudo dnf install papirus-icon-theme -y
     gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
@@ -133,9 +132,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     #Cursor
     git clone https://github.com/mustafaozhan/Breeze-Adapta-Cursor.git
     sudo cp -R ./Breeze-Adapta-Cursor /usr/share/icons/Breeze\ Adapta
-    gsettings set org.gnome.desktop.interface cursor-theme "Breeze Adapta"
-    echo 'Sifr (dark) is the recommended icon theme for Libreoffice with dark themes)'
-    sleep 10
+    gsettings set org.gnome.desktop.interface cursor-theme 'Breeze Adapta'
+    echo 'Sifr (dark), recommended icon theme for Libreoffice with dark themes)'
+    sleep 20
 fi
 read -p 'Set up extensions? (y/N) ' -n 1 -r
 echo -e "\n"
@@ -173,9 +172,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
     sudo dnf check-update
     sudo dnf install code -y
-    #Non terminal installable apps
-    firefox 'https://www.veracrypt.fr/en/Downloads.html'
-    firefox 'https://cryptomator.org/downloads/'
     #Appimage installer
     firefox 'https://github.com/TheAssassin/AppImageLauncher/releases'
     #Flatpak apps
